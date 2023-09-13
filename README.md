@@ -1,2 +1,2 @@
 # wdd230
-BYU-Idaho Front End Course
+WDD 230 is a BYU-Idaho course that focuses on the application of front-end web design and development technologies.
