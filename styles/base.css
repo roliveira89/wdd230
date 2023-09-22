@@ -17,27 +17,38 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+
+    display: grid;
+    gap: 20px; /* Add some spacing between sections */
 }
 
 main h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+main li {
     margin-bottom: 10px;
+    margin-right: 10px; /* Add spacing between list items */
 }
 
 /* Style the header section */
 header {
-    text-align: center;
-    padding: 20px 0;
+    padding: 40px;
+    display: flex; /* Use flexbox for the header */
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items horizontally and vertically */
 }
 
 header img {
-    max-width: 100%;
+    max-width: 20%; /* Limit image width to 30% of the header */
     border-radius: 5%; /* Makes the image round */
 }
 
 header h1 {
     font-family: 'Lato', sans-serif; /* Use the Lato font from Google Fonts */
-    font-size: 24px;
-    margin-top: 10px;
+    font-size: 36px;
+    margin-left: 20px; /* Increase the left margin for more spacing */
 }
 
 /* Style the navigation menu */
@@ -47,10 +58,13 @@ nav ul {
     justify-content: center;
     background-color: #000;
     padding: 10px 0;
+    flex-direction: column; /* Display links in a single column */
 }
 
 nav li {
-    margin: 0 15px;
+    /*margin: 0 15px;*/
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: center; /* Center the text in mobile view */
 }
 
 nav a {
@@ -81,10 +95,19 @@ main li {
     color: #fff;
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .card p {
     margin-bottom: 10px; /* Add margin to create vertical spacing */
+}
+
+.card:first-child { /* Select the first card */
+    text-align: left; /* Left-align text in the first card */
+}
+
+.card:last-child { /* Select the last card */
+    text-align: center; /* Center-align text in the second card */
 }
 
 /* Style the footer section */

@@ -1,0 +1,67 @@
+@media screen and (min-width: 1024px) {
+    /* Increase font size for better readability on larger screens */
+    body {
+        font-size: 16px;
+    }
+
+    /* Widen the main content area to utilize available space */
+    main {
+        max-width: 1000px;
+        margin: 0 auto; /* Center the content horizontally */
+        grid-template-columns: 60% 40%; /* Display in two columns */
+        align-items: start; /* Align items at the top of the columns */
+    }
+
+    main h2 {
+        grid-column: span 2; /* Span both columns */
+    }
+
+    .card {
+        display: flex; /* Use flexbox for the "card" sections */
+        flex-direction: column; /* Display in a single column initially */
+        height: 100%; /* Ensure both cards occupy the same vertical space */
+    }
+
+    .card h3 {
+        text-align: center;
+    }
+
+    .card:first-child { /* Select the first card */
+        text-align: left; /* Left-align text in the first card */
+    }
+
+    .card:last-child { /* Select the last card */
+        text-align: center; /* Center-align text in the second card */
+    }
+
+    header {
+        padding: 40px;
+        display: flex; /* Use flexbox for the header */
+        justify-content: center; /* Center-align items horizontally */
+        align-items: center; /* Center-align items horizontally and vertically */
+    }
+
+    header img {
+        max-width: 10%; /* Limit image width to 10% of the header */
+    }
+
+    header h1 {
+        font-family: 'Lato', sans-serif; /* Use the Lato font from Google Fonts */
+        font-size: 36px;
+        margin-left: 20px; /* Increase the left margin for more spacing */
+    }
+
+    nav ul {
+        flex-direction: row; /* Display links in a single row for larger views */
+        justify-content: center; /* Center the links horizontally */
+        padding: 10px 0; /* Reset padding */
+    }
+
+    nav li {
+        margin: 0 15px; /* Add spacing between list items horizontally */
+    }
+
+    footer {
+        padding: 20px 0; /* Increase padding in the footer */
+    }
+}
