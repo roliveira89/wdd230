@@ -1,0 +1,181 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a dark blue background color for the body */
+body {
+    background-color: #082455;
+    color: #fff; /* Set text color to white */
+    font-family: 'Roboto', sans-serif; /* Use the Roboto font from Google Fonts */
+}
+
+/* Center the main content horizontally and limit its width */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px; /* Add some spacing between sections */
+}
+
+main h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+main li {
+    margin-bottom: 10px;
+    margin-right: 10px; /* Add spacing between list items */
+}
+
+/* Style the header section */
+header {
+    padding: 40px;
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for the header */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center-align items horizontally */
+    align-items: center; /* Center-align items horizontally and vertically */
+}
+
+header img {
+    max-width: 20%; /* Limit image width to 30% of the header */
+    border-radius: 5%; /* Makes the image round */
+}
+
+header h1 {
+    font-family: 'Lato', sans-serif; /* Use the Lato font from Google Fonts */
+    font-size: 36px;
+    margin: 10px 0; /* Adjust vertical margin */
+    width: 100%; /* Fill the entire width of the header */
+}
+
+header h2 {
+    font-size: 24px; /* Reduce font size for better alignment */
+    margin: 10px 0; /* Adjust vertical margin */
+    width: 100%; /* Fill the entire width of the header */
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    padding: 10px 0;
+    flex-direction: column; /* Display links in a single column */
+}
+
+nav li {
+    /*margin: 0 15px;*/
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: center; /* Center the text in mobile view */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style the course links list */
+main ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+main li {
+    margin-bottom: 10px;
+}
+
+/* Style the "card" sections */
+.card {
+    background-color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 10px; /* Add margin to create vertical spacing */
+}
+
+.card:first-child { /* Select the first card */
+    text-align: left; /* Left-align text in the first card */
+}
+
+.card:last-child { /* Select the last card */
+    text-align: center; /* Center-align text in the second card */
+}
+
+/* Style the footer section */
+footer {
+    text-align: center;
+    background-color: #000;
+    padding: 10px 0;
+    width: 100%; /* Use percentage width to ensure full width */
+}
+
+footer p {
+    color: #fff;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Responsive Views */
+/* Small Screen (Mobile) */
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Display one column in small screens */
+    }
+
+    .card {
+        width: 100%; /* Make cards take full width */
+    }
+
+    header img {
+        max-width: 30%; /* Increase image width for better visibility on mobile */
+    }
+
+    header h1 {
+        font-size: 28px; /* Decrease font size for better mobile readability */
+        margin-left: 10px; /* Adjust left margin */
+    }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Display two columns in medium screens */
+    }
+
+    footer {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    .card:last-child {
+        grid-column: span 2; /* Span two columns for the last card in medium screens */
+    }
+}
+
+/* Large Screen */
+@media screen and (min-width: 1025px) {
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Display three columns in large screens */
+    }
+
+    footer {
+        grid-column: span 3;
+    }
+}
